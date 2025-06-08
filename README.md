@@ -85,3 +85,12 @@ Dopo qualche momento:
 Una volta inserito nel terminale: php artisan serve.
 
 •	Frontend React su: http://localhost:3000
+
+Infine apro il terminale nella cartella sviluppo-app-web e inserisci:
+git add .
+git commit -m "Init: struttura progetto frontend e backend"
+Dopo la creazione della repository su GitHub, dal terminale:
+git remote add origin https://github.com/TUO_USERNAME/sviluppo-app-web.git
+git branch -M main
+git pull origin main --rebase
+git push -u origin main
