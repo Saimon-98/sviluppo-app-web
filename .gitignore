@@ -1,0 +1,16 @@
+# Laravel
+backend-laravel/vendor/
+backend-laravel/storage/
+backend-laravel/.env
+
+# Node/React
+frontend-react/node_modules/
+frontend-react/build/
+
+# Docker
+*.log
+*.pid
+
+# Sistema
+.DS_Store
+.env

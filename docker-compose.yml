@@ -1,0 +1,24 @@
+services:
+  backend:
+    build:
+      context: ./backend-laravel
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+    volumes:
+      - ./backend-laravel:/var/www/html
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+
+  frontend:
+    build:
+      context: ./frontend-react
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend-react:/app
+      - /app/node_modules
+    depends_on:
+      - backend
